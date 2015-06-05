@@ -1,0 +1,229 @@
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:1000%;
+  background-color:#000000;
+  opacity: 0.2;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 20%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+p
+{
+clear:both;
+}
+
+.category-input
+{
+	background : rgba(0,0,0,0);
+	border:none;
+  outline:none;
+	font-size: 2em;
+	width: 80%;
+/*	padding: 10px 10px 10px 10px*/
+}
+textarea
+{
+	overflow:hidden;
+	padding:0;
+  outline:none;
+	resize:none;
+	background : rgba(0,0,0,0);
+	border:none;
+  padding:0px;
+	margin:0px;
+	height:auto;
+	resize:none;
+	margin-left:10px;
+	width:180px;
+	
+}
+.jumbotron {
+	padding-right: 20%;
+	background: rgba(255,255,255,.1);
+
+}
+html {
+	-webkit-overflow-scrolling: touch;
+overflow-x: hidden;
+}
+html,body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+	background-image: url('/img/fuji.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*background: gray;*/
+	overflow-x: hidden;
+}
+
+.animate-show {
+  -webkit-transition:all linear 0.2s;
+  transition:all linear .2s;
+  opacity:1;
+}
+ 
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display:block!important;
+}
+ 
+.animate-show.ng-hide {
+  opacity:0;
+}
+ 
+.connect-lists {
+   padding:10px;
+}
+
+
+.todo-text {
+/*	font-weight: bold;*/
+	text-align: left;
+	cursor: move;
+}
+
+
+.list {
+	list-style: none outside none;
+	margin: 10px 0 30px;
+}
+
+.todo-list-container {
+  border: 0;
+  margin: 10px 10px 10px 10px;
+  padding: 5px;
+	width:300px;
+ /* background: linear-gradient(to right,rgb(250,230,220),rgb(250,220,210));*/
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px gray;
+ background: #f7fbfc; /* Old browsers */
+background: -moz-linear-gradient(top, #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7fbfc), color-stop(40%,#d9edf2), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 ); /* IE6-9 */
+copy
+copy
+}
+
+@media (max-width: 768px) {
+
+	.todo-list-container {
+		margin: 0 0 0 0;
+    width: 100%;
+		box-shadow: none;
+		border-radius: 0;
+	}
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+.todo {
+	width: 270px;
+  height: auto;
+	padding: 5px 5px;
+	margin: 5px 5px;
+	border-bottom: 1px dotted blue;
+
+
+	color: black;
+
+	font-size: 1.1em;
+/*	font-weight: bold;*/
+/*	text-align: left;
+	cursor: move;*/
+
+}
+
+
+/***  Extra ***/
+
+body {
+	font-family: Verdana, 'Trebuchet ms', Tahoma;
+}
+h2 {
+	text-align: center;
+}
+
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+  .container {
+    width:auto;
+    margin: auto;
+  }
+.panel {
+	clear: both;
+	display: block;
+	margin: 5em;
+}
+.crossout {
+	text-decoration: line-through;
+}
+#container {
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+#footer {
+	height: 100px;
+	margin-top: -100px;
+	position: relative;
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	color: white;
+	font-size: .7em;
+}
+#contents {
+	min-height: 100%;
+	padding: 0 0 100px;
+	box-sizing: border-box;
+	position: relative;
+}

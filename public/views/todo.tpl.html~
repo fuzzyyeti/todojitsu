@@ -1,0 +1,41 @@
+    <div class="container" ng-controller="TodoCtrl">
+				<div class="row">
+				<div class="well">
+				<input  ng-model="newCategory" confirm-input="addNewCategory()" class="todo-text" type="text" placeholder="Add new list"/>
+				<button class="btn btn-primary " ng-click="clearDone()">Clear completed items</button></div>
+				<img src="http://localhost:3000/img/glyphicons_free/glyphicons/png/glyphicons_469_server_new.png">
+				</div>
+				<div class="row">
+        <div class="floatleft">
+          <div ng-repeat="list in todos"   ng-controller="CategoryCtrl" class="todo-list-container floatleft">
+						<a href="#" ng-click="deleteCategory()">test</a>
+						<div >
+							<div ng-hide="!clicked" class="animate-show">
+								<editable-category delete-category="deleteCategory()" todo-model="list.category"></editable-category>
+							</div>
+							<div ng-hide="clicked">
+<h2>{{list.category}}</h2>
+							</div>
+						</div>
+						<div class="todo" >
+						<input class="todo-text" id="myinput" confirm-input="addNewItem()" ng-model="newItem" placeholder="Enter a new item"/>
+						</div>
+            <div ui-sortable="sortableOptions"  class="connect-lists" ng-model="list.items">
+              <div class="todo" ng-repeat="entry in list.items">
+                <div ng-controller="TodoItemCtrl" >
+										<input class="floatleft" type="checkbox" ng-model="done" class="check"/>
+										<div >
+                    <editable-todo et-style="crossOut" due-date="entry.date" delete-item="deleteItem()" todo-model="entry.task" focus-trigger="clicked"></editable-todo>
+                </div>
+							</div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+				</div>
+				<div class="row">
+				<div class="panel panel-primary"><div></div><a href="#" ng-click="undo()">undo</a></div>
+				
+				</div>
+    </div>

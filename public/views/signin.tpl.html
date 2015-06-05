@@ -1,0 +1,27 @@
+<div class="modal-content" class="modal-dialog">
+<div class="modal-header">
+            <h1>Sign In</h1>
+</div>
+<div class="modal-body">
+<h2>{{reason}}</h2>
+<form name="credentials" novalidate>
+  <div><!-- class="control-groups" >-->
+      <p> {{touched.contains('username')}} </p>
+      <label> Username:</label>
+      <input ng-blur="setTouched('username')" ng-class="not-touched : !touched" type="email" name="username" ng-model="username" required autofocus>
+      <span  ng-show="credentials.username.$invalid && !credentials.username.$pristine && touched" class="text-error">
+        must provide a valid email
+      </span>
+      <span ng-show="showError(credentials.username,'required')">
+        email required
+      </span>
+    </div>
+    <div>
+      <label> Password:</label>
+      <input type="password" name="password" ng-model="password" required>
+    </div>
+</form>
+<div class="modal-footer">
+    <button ng-disabled="credentials.$pristine || credentials.$invalid" class="btn btn-primary" ng-click="signin(username,password)">Sign In</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

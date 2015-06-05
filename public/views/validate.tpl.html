@@ -1,0 +1,9 @@
+<div class="hero-unit">
+  <h1>Todojitsu account validation</h1>
+  <p ng-show="validate_success" class="text-success">Todojitsu is a simple todo list web application that you can access from any device.  Sign up free and boost your productivity!</p>
+  <p ng-show="!validate_success" class="text-success">This validation code is invalid or expired.</p>
+	<p>{{validate_success}}</p>
+	<p>{{username}}</p>
+
+  <p><a class="btn btn-primary btn-large"  role="button" ng-click="navHome()">Home</a></p>
+</div>

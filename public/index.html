@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="todoJitsu">
+
+<head>
+  <title>Todojitsu</title>
+  <script type="text/javascript" src="/javascripts/vendor/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/jquery-ui/ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/angular/angular.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/angular-touch/angular-touch.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script type- "text/javascript" src="/javascripts/vendor/angular-ui-sortable/sortable.js"></script>
+  <script type- "text/javascript" src="/javascripts/vendor/pickadate/lib/picker.js"></script>
+  <script type- "text/javascript" src="/javascripts/vendor/pickadate/lib/picker.date.js"></script>
+  <script type- "text/javascript" src="/javascripts/vendor/jsondiffpatch/build/bundle.js"></script>
+  <script type- "text/javascript" src="/javascripts/vendor/fastclick/lib/fastclick.js"></script>
+  <script type="text/javascript" src="/javascripts/TodoModule.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="/javascripts/vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/javascripts/vendor/pickadate/lib/themes/default.css">
+  <link rel="stylesheet" href="/javascripts/vendor/pickadate/lib/themes/default.date.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no minimum-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body ng-controller="TodoCtrl">
+  <password value="setPasswordValue" show="showSetPassword" message="message" confirm-input="setPassword()">Set a new password</password>
+  <password value="enterPasswordValue" show="showEnterPassword" message="message" confirm-input="enterPassword()">Enter password</password>
+  <div id="container">
+    <div id="contents">
+      <ng-view></ng-view>
+
+    </div>
+    <div id="footer">
+      <p class="text-center">A Webapp by Fuzzy Yeti</p>
+      <p class="text-center">Icons by <a href="http://glyphicons.com">Glyphicon</a> are used by the <a href="http://creativecommons.org">Creative Commonss License</a></p>
+      <p class="text-center">Todojitsu name and logo copyright 2014</p>
+    </div>
+  </div>
+</body>
+
+</html>
