@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 		notify = require('gulp-notify'),
 		uglify = require('gulp-uglify'),
 		concat = require('gulp-concat'),
-		clean = require('gulp-rimraf'),
+		clean = require('gulp-clean'),
     spawn = require('child_process').spawn,
     node;
 
