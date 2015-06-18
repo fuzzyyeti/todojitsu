@@ -39,7 +39,7 @@ angular.module('todoJitsu')
 	$scope.addNewCategory = function(){
 		if ($scope.newCategory.name) {
 			todoList.addCategory($scope.newCategory.name);
-			$scope.newCategory = '';
+			$scope.newCategory.name = '';
 		};
 	};
 	
