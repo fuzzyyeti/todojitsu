@@ -34,7 +34,7 @@
   top: 3px;
   right: 5px;
   padding: 5px;
-  cursor: pointer;
+  cursor: move;
   font-size: 120%;
   display: inline-block;
   font-weight: bold;
@@ -113,7 +113,12 @@ html,body {
 .todo-text {
 /*	font-weight: bold;*/
 	text-align: left;
-	cursor: move;
+	cursor: pointer;
+}
+.todo-text-big {
+/*	font-weight: bold;*/
+	text-align: left;
+	cursor: text;
 }
 
 
@@ -162,6 +167,7 @@ copy
 	padding: 5px 5px;
 	margin: 5px 5px;
 	border-bottom: 1px dotted blue;
+	cursor: move;
 
 
 	color: black;
@@ -205,6 +211,14 @@ h2 {
 }
 .crossout {
 	text-decoration: line-through;
+}
+
+.check_box {
+	cursor: pointer;
+}
+
+.glyphicon {
+	cursor: pointer;
 }
 #container {
 	height: 100%;

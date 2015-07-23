@@ -1,7 +1,7 @@
 <div ng-swipe-right="swipe()" ng-click="click()" class="visible-xs" ng-mouseover="show = true" ng-mouseout="show = false">
 <div class="floatleft"><check-box box-state="boxState"></check-box></div>
 <!-- <textarea ng-style="etStyle" rows="1" class="todo-text" ng-model="todoModel" type="text" id="myinput"/> -->
-<div ng-style="etStyle">{{todoModel}}</div>
+<div ng-style="etStyle" class="todo-text">{{todoModel}}</div>
 <div ng-show="swiped"  class="pull-right btn-group"><button class="btn btn-default remove"><span class="glyphicon glyphicon-remove"></span></button>
 <button pick-a-date="dueDate" class="btn btn-default"><span class="glyphicon glyphicon-calendar"></span></button></div>
 <p align="right" ng-style="etStyle"><i>{{dueDate|fromNow}}</i></p>
@@ -9,7 +9,7 @@
 <div class="hidden-xs" ng-mouseover="show = true" ng-mouseout="show = false">
 <div class="floatleft"><check-box box-state="boxState"></check-box></div>
 <div >
-<textarea ng-style="etStyle" rows="1" class="todo-text" ng-model="todoModel" type="text" id="myinput"/>
+<textarea ng-style="etStyle" rows="1" class="todo-text-big" ng-model="todoModel" type="text" id="myinput"/>
 <div ng-show="show"  class="pull-right icon"><span class="glyphicon glyphicon-remove remove"></span></div>
 <div ng-show="show"  class="pull-right icon"><div pick-a-date="dueDate"><span class="glyphicon glyphicon-calendar"></div></div>
 <p align="right" ng-style="etStyle"><i>{{dueDate|fromNow}}</i></p>
