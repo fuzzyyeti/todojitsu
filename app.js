@@ -8,7 +8,6 @@ var mongoose = require('mongoose');
 var path = require('path');
 var http = require('http');
 var TodoSchema = require('./models/Todo.js');
-//var UserSchema = require('./models/User.js').UserSchema;
 var db = mongoose.createConnection('localhost','mytestapp');
 var Todo = db.model('todos',TodoSchema);
 console.log("got here");
@@ -25,9 +24,7 @@ app.configure(function() {
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({secret: 'okay' }));
-  app.use(express.static(path.join(__dirname, 'public')));
-//  app.use(passport.initialize());
- // app.use(passport.session());
+  app.use(express.static(path.join(__dirname, '/public')));
   app.use(app.router);
 
 });          
