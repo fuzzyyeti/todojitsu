@@ -8,9 +8,6 @@ todojitsu.com/*yourname*
 
 You can assign a password to each unique page you create. Each page allows multiple sub-lits, drag and drop sorting, and undo/redo capability.
 
-A live demo of todojitsu:
-  [todojitsu.com](http://todojitsu.com)
-
 ## Installation
 
 1. clone the repository to a unix line system
